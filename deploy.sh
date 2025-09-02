@@ -22,7 +22,7 @@ start_local() {
     echo "🔧 Starting n8n locally..."
     docker-compose up -d
     echo "✅ n8n is starting up..."
-    echo "🌐 Access n8n at: http://localhost:5678"
+    echo "🌐 Access n8n at: http://localhost:5679"
     echo "👤 Username: admin"
     echo "🔑 Password: password123"
 }

@@ -22,7 +22,7 @@ docker-compose up -d
 ```
 
 ### Step 3: Access n8n
-- Open your browser and go to: `http://localhost:5678`
+- Open your browser and go to: `http://localhost:5679`
 - Login with:
   - Username: `admin`
   - Password: `password123`
