@@ -13,13 +13,13 @@ services:
       - N8N_BASIC_AUTH_PASSWORD=password123
       - N8N_DATABASE_TYPE=sqlite
       - N8N_DATABASE_SQLITE_DATABASE=/home/node/.n8n/database.sqlite
-      - N8N_DATABASE_SQLITE_EXECUTABLE=/usr/bin/sqlite3
       - N8N_HOST=0.0.0.0
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
       - NODE_ENV=production
       - WEBHOOK_URL=http://localhost:5679/
       - GENERIC_TIMEZONE=UTC
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - n8n_data:/home/node/.n8n
       - ./data:/home/node/.n8n

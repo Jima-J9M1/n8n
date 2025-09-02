@@ -16,8 +16,6 @@ services:
         value: sqlite
       - key: N8N_DATABASE_SQLITE_DATABASE
         value: /home/node/.n8n/database.sqlite
-      - key: N8N_DATABASE_SQLITE_EXECUTABLE
-        value: /usr/bin/sqlite3
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
@@ -28,5 +26,7 @@ services:
         value: production
       - key: GENERIC_TIMEZONE
         value: UTC
-    buildCommand: docker build -t n8n .
-    startCommand: docker run -p $PORT:5678 n8n
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: true
+    image: n8nio/n8n:latest
+    startCommand: n8n start
